@@ -35,7 +35,7 @@ function App() {
     const net = await facemesh.load(facemesh.SupportedPackages.mediapipeFacemesh);
     setInterval(() => {
       detect(net);
-    }, 1);
+    }, 10);
   };
 
   const detect = async (net) => {
@@ -84,11 +84,12 @@ function App() {
             left: 0,
             right: 0,
             textAlign: "center",
-            zIndex: 9,
+            zindex: 9,
             width: 640,
             height: 480,
           }}
         />
+
         <canvas
           ref={canvasRef}
           style={{
@@ -98,7 +99,7 @@ function App() {
             left: 0,
             right: 0,
             textAlign: "center",
-            zIndex: 9,
+            zindex: 9,
             width: 640,
             height: 480,
           }}
